@@ -96,7 +96,12 @@ userId | Y | 用户ID
 sign | Y | 签名
 
 
-
+#### 地址页面
+使用
+```
+https://www.a3ipay.com/#/address?address=${address}&coinType=${coinType}
+```
+使用通过创建地址创建的地址 和币种 替换上述中的${address} 和 ${coinTyp}
 
 
 
