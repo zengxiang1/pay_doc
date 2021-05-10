@@ -3,7 +3,8 @@
 #### 1.1 支持币种
 
 USDT(omni  btc)  
-USDT(ERC20 eth)  泰达币  
+USDT(ERC20 eth)  泰达币
+USDT(TRC20 trx)
 
 #### 1.2 功能描述
  上述币种的自动归总， 记账功能 以及审核提币功能
@@ -60,7 +61,7 @@ time | Y | 时间戳(秒)
 /${addressType}/create
 ```
 
-``` ${addressType} ```为地址类型 目前支持 BTC(OMNI) 或者ETH（ERC20）
+``` ${addressType} ```为地址类型 目前支持 BTC(OMNI) 或者ETH（ERC20）或者 TRX(TRC20)
 参数名 | 是否必须| 参数说明
 ---|---| ---
 userId | Y | 用户Id
@@ -71,12 +72,12 @@ userId | Y | 用户Id
 /send
 ```
 
-``` ${addressType} ```为地址类型 目前支持 BTC 或者ETH
+``` ${addressType} ```为地址类型 目前支持 BTC 或者ETH 或者TRX
 参数名 | 是否必须| 参数说明
 ---|---| ---
 address | Y | 用户地址
-addressType | Y | 地址类型(BTC 或者ETH)
-series | Y | 系列(比特币传BTC 以太坊传ETH USDT 传 OMNI 或者 ERC20)
+addressType | Y | 地址类型(BTC 或者ETH) 或者TRX
+series | Y | 系列(比特币传BTC 以太坊传ETH USDT 传 OMNI 或者 ERC20) 或者TRC20
 amount | Y | 数量
 coin | Y | 币种（见1中支持的币种）
 
@@ -87,7 +88,7 @@ coin | Y | 币种（见1中支持的币种）
 参数名 | 是否必须| 参数说明
 ---|---| ---
 addr | Y | 用户地址
-addressType | Y | 地址类型(BTC 或者ETH)
+addressType | Y | 地址类型(BTC 或者ETH 或者TRX)
 time | Y | 时间
 hash | Y | 交易hash  正常来说不会重复通知， 但是平台方需要保存好这个hash 如果这个hash已经存入 则此条通知应作废
 coin | Y | 币种
